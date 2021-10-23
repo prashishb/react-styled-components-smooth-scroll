@@ -1,4 +1,5 @@
 import React from 'react';
+import { animateScroll as scroll } from 'react-scroll';
 import {
   FaFacebook,
   FaInstagram,
@@ -24,6 +25,10 @@ import {
 } from './FooterElements';
 
 const Footer = () => {
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <FooterContainer>
       <FooterWrap>
@@ -31,9 +36,8 @@ const Footer = () => {
           <FooterLinksWrapper>
             <FooterLinkItems>
               <FooterLinkTitle>About Us</FooterLinkTitle>
-              <FooterLink to='/signin'>How it works</FooterLink>
-              <FooterLink to='/signin'>Testimonials</FooterLink>
-              <FooterLink to='/'>Careers</FooterLink>
+              <FooterLink to='/signin'>FAQ</FooterLink>
+              <FooterLink to='/'>Career</FooterLink>
               <FooterLink to='/'>Investors</FooterLink>
               <FooterLink to='/'>Terms of Service</FooterLink>
             </FooterLinkItems>
@@ -64,7 +68,9 @@ const Footer = () => {
         </FooterLinksContainer>
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo to='/'>dogebank</SocialLogo>
+            <SocialLogo to='/' onClick={toggleHome}>
+              dogebank
+            </SocialLogo>
             <WebsiteRights>
               dogebank &copy; {new Date().getFullYear()} All rights reserved
             </WebsiteRights>
