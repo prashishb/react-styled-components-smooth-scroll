@@ -34,6 +34,7 @@ export const NavLogo = styled(LinkR)`
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.5rem;
+  line-height: 80px;
   display: flex;
   align-items: center;
   margin-left: 24px;
@@ -43,7 +44,6 @@ export const NavLogo = styled(LinkR)`
 
 export const MobileIcon = styled.div`
   display: none;
-
   @media (max-width: 769px) {
     display: block;
     position: absolute;
@@ -53,6 +53,7 @@ export const MobileIcon = styled.div`
     font-size: 1.8rem;
     cursor: pointer;
     color: #fff;
+    z-index: 20;
   }
 `;
 
