@@ -43,7 +43,7 @@ const HeroSection = () => {
             spy={true}
             exact='true'
             offset={-80}>
-            > Get Started {hover ? <ArrowForward /> : <ArrowRight />}
+            Get Started {hover ? <ArrowForward /> : <ArrowRight />}
           </ButtonR>
         </HeroBtnWrapper>
       </HeroContent>
